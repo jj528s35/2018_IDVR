@@ -892,6 +892,7 @@ MonoBehaviour:
   framesPerStep: 30
   vivecontroller: {fileID: 215067046}
   vivecontroller2: {fileID: 134236992}
+  viveHMD: {fileID: 1245810704}
 --- !u!1 &1165778631
 GameObject:
   m_ObjectHideFlags: 0

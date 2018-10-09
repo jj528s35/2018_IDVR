@@ -20,6 +20,7 @@ public class WalkInPlace : MonoBehaviour {
 
     public GameObject vivecontroller;
     public GameObject vivecontroller2;
+    public GameObject viveHMD;
 
     private int stepFrame = 0;
     private Vector3 dirForward;
@@ -42,19 +43,25 @@ public class WalkInPlace : MonoBehaviour {
         if (stepFrame >= (framesPerStep / 2.0f))
         {
             dirForward = (vivecontroller.transform.forward + vivecontroller2.transform.forward);
+            dirForward = viveHMD.transform.forward;
             dirForward = dirForward.normalized;
+             
             if (stepDetect()) { 
                 if (runDetect())
                 {
                     dirForward *= runSpeed;
+                    dirForward.y = 0;
+                    this.transform.position = this.transform.position + dirForward;
                 }
                 else
                 {
                     dirForward *= walkSpeed;
+                    dirForward.y = 0;
+                    this.transform.position = this.transform.position + dirForward;
                 }
             }
             stepFrame = 0;
-            this.transform.position = this.transform.position + dirForward;
+            
         }
     }
 
@@ -75,15 +82,15 @@ public class WalkInPlace : MonoBehaviour {
         float hand1Sign = Mathf.Sign(velHand1.y);
         float hand2Sign = Mathf.Sign(velHand2.y);
         if ((hand1Sign != hand2Sign)
-            && (velHMD.y > stepHMDThreshold || velHMD.y < -stepHMDThreshold)
+            //&& (velHMD.y > stepHMDThreshold || velHMD.y < -stepHMDThreshold)
             && ((velHand1.y > stepHandThreshold || velHand1.y < -stepHandThreshold)
                 || (velHand2.y > stepHandThreshold || velHand2.y < -stepHandThreshold))
-            && (velHMD.x < shakeHMDThreshold && velHMD.x > -shakeHMDThreshold)
-            && (velHMD.z < shakeHMDThreshold && velHMD.z > -shakeHMDThreshold)
-            && (velHand1.x < stepHandThreshold && velHand1.x > -stepHandThreshold)
-            && (velHand1.z < stepHandThreshold && velHand1.z > -stepHandThreshold)
-            && (velHand2.x < stepHandThreshold && velHand2.x > -stepHandThreshold)
-            && (velHand2.z < stepHandThreshold && velHand2.z > -stepHandThreshold)
+            //&& (velHMD.x < shakeHMDThreshold && velHMD.x > -shakeHMDThreshold)
+            //&& (velHMD.z < shakeHMDThreshold && velHMD.z > -shakeHMDThreshold)
+            //&& (velHand1.x < stepHandThreshold && velHand1.x > -stepHandThreshold)
+            //&& (velHand1.z < stepHandThreshold && velHand1.z > -stepHandThreshold)
+            //&& (velHand2.x < stepHandThreshold && velHand2.x > -stepHandThreshold)
+            //&& (velHand2.z < stepHandThreshold && velHand2.z > -stepHandThreshold)
             )
         {
             //Debug.Log("Step Taken to X: " + player.transform.position.x + " Z: " + player.transform.position.z);
