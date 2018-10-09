@@ -40,7 +40,7 @@ public class WalkInPlace : MonoBehaviour {
     void UpdateMovement()
     {
         stepFrame++;
-        if (stepFrame >= (framesPerStep / 2.0f))
+        if (stepFrame >= (framesPerStep / 2.0f))//need?? framesPerStep--
         {
             dirForward = (vivecontroller.transform.forward + vivecontroller2.transform.forward);
             dirForward = viveHMD.transform.forward;
@@ -52,6 +52,7 @@ public class WalkInPlace : MonoBehaviour {
                     dirForward *= runSpeed;
                     dirForward.y = 0;
                     this.transform.position = this.transform.position + dirForward;
+                    //transform.Translate(dirForward * Time.deltaTime);
                 }
                 else
                 {
@@ -82,7 +83,7 @@ public class WalkInPlace : MonoBehaviour {
         float hand1Sign = Mathf.Sign(velHand1.y);
         float hand2Sign = Mathf.Sign(velHand2.y);
         if ((hand1Sign != hand2Sign)
-            //&& (velHMD.y > stepHMDThreshold || velHMD.y < -stepHMDThreshold)
+            && (velHMD.y > stepHMDThreshold || velHMD.y < -stepHMDThreshold)
             && ((velHand1.y > stepHandThreshold || velHand1.y < -stepHandThreshold)
                 || (velHand2.y > stepHandThreshold || velHand2.y < -stepHandThreshold))
             //&& (velHMD.x < shakeHMDThreshold && velHMD.x > -shakeHMDThreshold)
