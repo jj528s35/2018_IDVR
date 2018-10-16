@@ -342,6 +342,17 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Examples\VRTP_ExampleMovement.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\Tunnelling.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingBase.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingImageBase.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingMaskObject.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingMaskObjectMobile.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingMobile.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingOpaque.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingPreset.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingPresetBase.cs" />
+    <Compile Include="Assets\VrTunnellingPro\Scripts\TunnellingPresetMobile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
@@ -355,6 +366,24 @@
     <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
     <None Include="Assets\SteamVR\readme.txt" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\BlitA.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\Mask.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\SeparableBlur.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\Skybox.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\Skysphere.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\Tunnelling.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\TunnellingStencil.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\TunnellingUtils.cginc" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\TunnellingVertex.shader" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\TunnellingVertexUtils.cginc" />
+    <None Include="Assets\VrTunnellingPro\Resources\Shaders\Window.shader" />
+    <None Include="Assets\VrTunnellingPro\Shaders\CageCommon.cginc" />
+    <None Include="Assets\VrTunnellingPro\Shaders\CageFog.cginc" />
+    <None Include="Assets\VrTunnellingPro\Shaders\CageOpaque.shader" />
+    <None Include="Assets\VrTunnellingPro\Shaders\CageOpaqueFog.shader" />
+    <None Include="Assets\VrTunnellingPro\Shaders\CageTransparent.shader" />
+    <None Include="Assets\VrTunnellingPro\Shaders\CageTransparentFog.shader" />
+    <None Include="Assets\VrTunnellingPro\Shaders\DoubleSided.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

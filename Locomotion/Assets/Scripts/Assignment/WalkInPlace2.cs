@@ -49,7 +49,7 @@ public class WalkInPlace2 : MonoBehaviour {
             float angle = controller.transform.rotation.eulerAngles.y / 180 * Mathf.PI;
 
             //If your head moves past the threshhold, your character moves at a certain speed.
-            if (deltaY > runningThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * runningMultiplier * Time.deltaTime, Space.World);
+            if (deltaY > runningThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * runningMultiplier * Time.deltaTime, Space.World);//not sure does it need Space.World
             else if (deltaY > joggingThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * joggingMultiplier * Time.deltaTime, Space.World);
             else if (deltaY > walkingThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * walkingMultiplier * Time.deltaTime, Space.World);
 
