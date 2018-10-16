@@ -235,6 +235,7 @@
     <Compile Include="Assets\Scripts\Assignment\GameFlowManager.cs" />
     <Compile Include="Assets\Scripts\Assignment\Rotater.cs" />
     <Compile Include="Assets\Scripts\Assignment\TargetController.cs" />
+    <Compile Include="Assets\Scripts\Assignment\test.cs" />
     <Compile Include="Assets\Scripts\Assignment\WalkInPlace.cs" />
     <Compile Include="Assets\Scripts\Assignment\WalkInPlace2.cs" />
     <Compile Include="Assets\Scripts\DinoController.cs" />

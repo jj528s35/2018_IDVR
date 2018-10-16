@@ -7,7 +7,7 @@ public class WalkInPlace2 : MonoBehaviour {
     public SteamVR_TrackedObject head;
 
     //Your speed
-    private float speed;
+    public float speed = 1;
 
     //How much your head has to move to walk, jog, or run
     private const float walkingThreshhold = .00028f;
@@ -45,14 +45,15 @@ public class WalkInPlace2 : MonoBehaviour {
 
         //This is the part where you actually move.
         {
-            //You walk in the direction of your controller
+            //You walk in the direction of your HMD (controller)
             float angle = controller.transform.rotation.eulerAngles.y / 180 * Mathf.PI;
 
             //If your head moves past the threshhold, your character moves at a certain speed.
-            if (deltaY > runningThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * runningMultiplier * Time.deltaTime);
-            else if (deltaY > joggingThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * joggingMultiplier * Time.deltaTime);
-            else if (deltaY > walkingThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * walkingMultiplier * Time.deltaTime);
+            if (deltaY > runningThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * runningMultiplier * Time.deltaTime, Space.World);
+            else if (deltaY > joggingThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * joggingMultiplier * Time.deltaTime, Space.World);
+            else if (deltaY > walkingThreshhold) transform.Translate(new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * speed * walkingMultiplier * Time.deltaTime, Space.World);
 
         }
+
     }
 }
