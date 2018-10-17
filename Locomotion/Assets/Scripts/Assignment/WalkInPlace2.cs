@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WalkInPlace2 : MonoBehaviour {
-    public SteamVR_TrackedObject controller;
-    public SteamVR_TrackedObject head;
+    public GameObject controller;
+    public GameObject head;
 
     //Your speed
     public float speed = 1;

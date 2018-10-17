@@ -1003,9 +1003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e595f5cf0f02e64593e153fa6300486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1165778635}
-  head: {fileID: 1165778635}
-  speed: 3
+  controller: {fileID: 1245810704}
+  head: {fileID: 1245810704}
+  speed: 1
 --- !u!114 &1038562904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,8 +1137,8 @@ MonoBehaviour:
   accelerationSmoothing: 0.15
   useVelocity: 1
   velocityStrength: 1
-  velocityMin: 0
-  velocityMax: 5
+  velocityMin: -1
+  velocityMax: 1.25
   velocitySmoothing: 0.15
   backgroundMode: 0
   _cageParent: {fileID: 0}
@@ -1296,7 +1296,7 @@ GameObject:
   - component: {fileID: 1245810706}
   - component: {fileID: 1245810710}
   - component: {fileID: 1245810707}
-  - component: {fileID: 1245810712}
+  - component: {fileID: 1245810711}
   - component: {fileID: 1245810705}
   m_Layer: 0
   m_Name: Main Camera (eye)
@@ -1402,17 +1402,52 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1245810712
+--- !u!114 &1245810711
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1245810704}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef5d237fc3c9d584bb524a9aba33d0a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ac20df6282234e419ee9915e0fd1676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motionTarget: {fileID: 1038562900}
+  effectColor: {r: 0, g: 0, b: 0, a: 1}
+  effectCoverage: 0.75
+  effectFeather: 0.1
+  effectSkybox: {fileID: 0}
+  applyColorToBackground: 0
+  useAngularVelocity: 1
+  angularVelocityStrength: 1
+  angularVelocityMin: 0
+  angularVelocityMax: 180
+  angularVelocitySmoothing: 0.15
+  useAcceleration: 0
+  accelerationStrength: 1
+  accelerationMin: 0
+  accelerationMax: 0
+  accelerationSmoothing: 0.15
+  useVelocity: 1
+  velocityStrength: 1
+  velocityMin: -1
+  velocityMax: 1.25
+  velocitySmoothing: 0.15
+  backgroundMode: 0
+  _cageParent: {fileID: 0}
+  cageDownsample: 0
+  cageAntiAliasing: 0
+  cageUpdateEveryFrame: 0
+  cageFogDensity: 0.01
+  cageFogPower: 2
+  cageFogBlend: 1
+  maskMode: 0
+  blurDownsample: 3
+  blurDistance: 3
+  blurPasses: 3
+  blurSamples: 0
+  irisZRejection: 1
 --- !u!1 &1246561143
 GameObject:
   m_ObjectHideFlags: 0
